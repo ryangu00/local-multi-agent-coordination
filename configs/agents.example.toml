@@ -1,0 +1,37 @@
+# Synthetic loopback endpoints only; no production roster or port assignments.
+# Run from the repository root. Replace python3 with your interpreter if needed.
+[agent-a]
+port = 0
+max_concurrency = 6
+timeout_s = 6
+command = "python3 -B fixtures/stub_agent.py echo {prompt}"
+skills = ["echo"]
+description = "Synthetic echo fixture"
+
+[agent-b]
+port = 0
+max_concurrency = 6
+timeout_s = 6
+command = "python3 -B fixtures/stub_agent.py echo {prompt}"
+skills = ["echo"]
+description = "Synthetic echo fixture"
+
+[agent-c]
+port = 0
+max_concurrency = 6
+timeout_s = 6
+command = "python3 -B fixtures/stub_agent.py noisy {prompt}"
+drop_line_regex = '^\[(noise|startup)\]'
+skills = ["echo"]
+description = "Synthetic noisy echo fixture"
+
+[agent-d]
+port = 0
+max_concurrency = 6
+timeout_s = 6
+command = "python3 -B fixtures/stub_agent.py echo {prompt}"
+skills = ["echo"]
+description = "Synthetic echo fixture"
+
+# Slow and process-tree modes are exercised by the subprocess tests; do not
+# include them as extra agents in the default echo matrix.

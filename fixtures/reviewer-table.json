@@ -1,0 +1,6 @@
+{
+  "worker-a": "reviewer-b",
+  "worker-c": "reviewer-b",
+  "worker-d": "reviewer-b",
+  "reviewer-b": "worker-a"
+}

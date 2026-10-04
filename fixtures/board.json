@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "id": "synthetic-success",
+      "assignee": "a2a:agent-a",
+      "status": "ready",
+      "dirty_fixture": false,
+      "body": "Create out.txt containing hi.\nworkdir: ./state/success\n## acceptance\n```json\n[{\"type\": \"file_contains\", \"path\": \"out.txt\", \"pattern\": \"^hi\\\\n$\"}]\n```",
+      "comments": []
+    },
+    {
+      "id": "synthetic-unsatisfiable",
+      "assignee": "a2a:agent-a",
+      "status": "ready",
+      "dirty_fixture": false,
+      "body": "Create out.txt containing hi.\nworkdir: ./state/unsatisfiable\n## acceptance\n```json\n[{\"type\": \"file_contains\", \"path\": \"out.txt\", \"pattern\": \"[\"}]\n```",
+      "comments": []
+    },
+    {
+      "id": "synthetic-dirty",
+      "assignee": "a2a:agent-a",
+      "status": "ready",
+      "dirty_fixture": true,
+      "body": "Create out.txt containing hi.\nworkdir: ./state/dirty\n## acceptance\n```json\n[{\"type\": \"file_exists\", \"path\": \"out.txt\"}]\n```",
+      "comments": []
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "kanban": {
+    "default_reviewer_map": {
+      "worker-a": "reviewer-b",
+      "worker-c": "reviewer-b",
+      "worker-d": "reviewer-b",
+      "reviewer-b": "worker-a"
+    },
+    "require_review_before_complete": true,
+    "review_enforcement": {
+      "enabled": true
+    },
+    "dispatch_interval_seconds": 60
+  }
+}

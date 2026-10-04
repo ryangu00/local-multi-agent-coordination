@@ -1,0 +1,14 @@
+# Synthetic alternatives for adapter tests. Ports are assigned by a test runner.
+[slow]
+port = 0
+max_concurrency = 6
+timeout_s = 6
+command = "python3 -B fixtures/stub_agent.py slow {prompt}"
+skills = ["slow"]
+
+[tree]
+port = 0
+max_concurrency = 6
+timeout_s = 1
+command = "python3 -B fixtures/stub_agent.py tree {prompt}"
+skills = ["process-tree"]
